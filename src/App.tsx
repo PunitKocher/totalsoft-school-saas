@@ -18,6 +18,8 @@ import Blank from "./pages/Blank";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
+import StudentsList from "./pages/Students/StudentsList";
+import AdmissionForm from "./pages/Students/AdmissionForm";
 
 export default function App() {
   return (
@@ -51,11 +53,18 @@ export default function App() {
             {/* Charts */}
             <Route path="/line-chart" element={<LineChart />} />
             <Route path="/bar-chart" element={<BarChart />} />
+
+            {/* School Module Routes */}
+            <Route path="/students" element={<StudentsList />} />
+            <Route path="/students/admission" element={<AdmissionForm />} />
           </Route>
 
           {/* Auth Layout */}
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+
+          {/* School Module Routes - Removed from here */}
+
 
           {/* Fallback Route */}
           <Route path="*" element={<NotFound />} />
