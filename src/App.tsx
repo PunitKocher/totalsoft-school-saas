@@ -20,6 +20,13 @@ import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
 import StudentsList from "./pages/Students/StudentsList";
 import AdmissionForm from "./pages/Students/AdmissionForm";
+import TeachersList from "./pages/Staff/TeachersList";
+import AddTeacher from "./pages/Staff/AddTeacher";
+import ClassesList from "./pages/Academics/ClassesList";
+import SubjectsList from "./pages/Academics/SubjectsList";
+import ClassTimetable from "./pages/Academics/ClassTimetable";
+import FeeCollection from "./pages/Finance/FeeCollection";
+import Expenses from "./pages/Finance/Expenses";
 
 export default function App() {
   return (
@@ -57,6 +64,16 @@ export default function App() {
             {/* School Module Routes */}
             <Route path="/students" element={<StudentsList />} />
             <Route path="/students/admission" element={<AdmissionForm />} />
+
+            <Route path="/teachers" element={<TeachersList />} />
+            <Route path="/teachers/add" element={<AddTeacher />} />
+
+            <Route path="/academics/classes" element={<ClassesList />} />
+            <Route path="/academics/subjects" element={<SubjectsList />} />
+            <Route path="/academics/timetable" element={<ClassTimetable />} />
+
+            <Route path="/finance/fees" element={<FeeCollection />} />
+            <Route path="/finance/expenses" element={<Expenses />} />
           </Route>
 
           {/* Auth Layout */}
